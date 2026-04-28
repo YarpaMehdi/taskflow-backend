@@ -41,6 +41,11 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
+// Root route
+app.get('/', (req, res) => {
+  res.send('TaskFlow API is running successfully!');
+});
+
 // Error handler (must be last)
 app.use(errorHandler);
 
